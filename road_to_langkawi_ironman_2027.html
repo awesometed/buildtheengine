@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#17231f">
+<title>The Road to Langkawi — Ironman 2027 Journal</title>
+<style>
+:root{--bg:#f3f1eb;--paper:#fffefa;--ink:#202a25;--muted:#69736c;--line:#e4e1d8;--green:#29483c;--green2:#dce8df;--gold:#b68b4b;--red:#9c5548;--shadow:0 8px 28px rgba(31,42,36,.07)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+header{background:linear-gradient(135deg,#17231f,#355345);color:#fff;padding:26px 20px 22px}
+.wrap{max-width:960px;margin:auto}.eyebrow{font-size:11px;letter-spacing:.17em;text-transform:uppercase;color:#d8c29d;font-weight:700}
+h1{font:600 clamp(27px,5vw,42px)/1.08 Georgia,serif;letter-spacing:.01em;margin:9px 0 5px}
+.sub{color:#dce4de;font-size:13px}.motto{font:italic 16px Georgia,serif;color:#e9ddc9;margin-top:16px}
+nav{display:flex;gap:7px;overflow:auto;padding:12px 14px;background:#fffefa;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+nav button{border:0;background:transparent;color:var(--muted);padding:9px 12px;border-radius:20px;white-space:nowrap;font-weight:650}
+nav button.active{background:var(--green);color:white}
+main{max-width:960px;margin:auto;padding:20px 15px 60px}
+h2{font:600 25px Georgia,serif;margin:0 0 5px}h3{font-size:16px;margin:0 0 10px}
+.muted{color:var(--muted)}.small{font-size:12px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:15px;padding:16px;box-shadow:var(--shadow);margin-bottom:13px}
+.stat{font:600 27px Georgia,serif;color:var(--green);margin-top:5px}
+.hero{background:#e6ece5;border-radius:16px;padding:18px;margin-bottom:14px}
+.hero strong{font:600 21px Georgia,serif}
+button,.btn{cursor:pointer;border:0;border-radius:10px;padding:11px 14px;background:var(--green);color:white;font-weight:650;font-size:14px}
+button.secondary,.btn.secondary{background:#e8ebe6;color:var(--green)}
+button.ghost{background:transparent;color:var(--green);border:1px solid var(--line)}
+button.danger{background:#f4e5e1;color:#843f35}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+label{display:block;font-size:12px;font-weight:700;color:#566159;margin:13px 0 5px}
+input,textarea,select{width:100%;border:1px solid #d9d9d0;border-radius:9px;background:#fff;padding:11px;font:14px/1.45 inherit;color:var(--ink)}
+textarea{min-height:82px;resize:vertical}
+input:focus,textarea:focus,select:focus{outline:2px solid #9eb6a4;border-color:#73917d}
+.formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 12px}
+.entry{border-left:3px solid var(--gold);padding:4px 0 4px 12px;margin:13px 0}
+.entry h3{margin:0}.tag{display:inline-block;background:var(--green2);color:var(--green);padding:3px 8px;border-radius:20px;font-size:11px;font-weight:700;margin:3px 4px 3px 0}
+.checkrow{display:flex;gap:9px;align-items:flex-start;margin:9px 0}.checkrow input{width:auto;margin-top:4px}
+hr{border:0;border-top:1px solid var(--line);margin:16px 0}
+.hidden{display:none!important}
+.notice{background:#f5eddd;border:1px solid #eadcc0;border-radius:10px;padding:12px;font-size:13px}
+footer{text-align:center;color:var(--muted);font-size:11px;padding:25px}
+@media(max-width:600px){.grid,.formgrid{grid-template-columns:1fr}.card{padding:14px}main{padding:16px 12px 50px}header{padding:22px 17px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<div class="eyebrow">A private endurance journal · 2026—2027</div>
+<h1>THE ROAD TO LANGKAWI</h1>
+<div class="sub">IRONMAN 2027 · 13 NOVEMBER 2027 · LANGKAWI, MALAYSIA</div>
+<div class="motto">“Strive for balance, lead with integrity, and improve every day.”</div>
+</div></header>
+<nav id="nav">
+<button class="active" data-tab="home">Overview</button>
+<button data-tab="new">New entry</button>
+<button data-tab="journal">Journal</button>
+<button data-tab="reviews">Reviews</button>
+<button data-tab="documentary">Documentary</button>
+<button data-tab="settings">Backup & settings</button>
+</nav>
+<main>
+<section id="home">
+<div class="hero"><div class="eyebrow" style="color:#587061">THE PURPOSE</div><strong>Train with intention. Record with honesty. Keep the journey bigger than the race.</strong><p class="muted">A private record of body, mind, soul, family and the work it takes to reach the start line.</p></div>
+<div class="grid">
+<div class="card"><div class="small">DAYS TO RACE DAY</div><div class="stat" id="countdown">—</div><div class="small">13 November 2027</div></div>
+<div class="card"><div class="small">JOURNAL ENTRIES</div><div class="stat" id="entryCount">0</div><div class="small">Your story, one entry at a time</div></div>
+<div class="card"><div class="small">TRAINING HOURS LOGGED</div><div class="stat" id="hours">0.0</div><div class="small">Hours recorded in journal</div></div>
+<div class="card"><div class="small">DOCUMENTARY ITEMS</div><div class="stat" id="mediaCount">0</div><div class="small">Moments saved for later</div></div>
+</div>
+<div class="card"><h3>Start here</h3><p class="muted">A good entry can be three honest sentences. On hard days, record only what happened and how you feel. Rest is part of the story.</p><div class="actions"><button onclick="showTab('new')">Write today's entry</button><button class="secondary" onclick="showTab('reviews')">Open review templates</button></div></div>
+<div class="card"><h3>Latest entries</h3><div id="latest" class="muted">No entries yet. Your first page is waiting.</div></div>
+<div class="notice"><b>Private-first rule:</b> Nothing in this journal is published automatically. Documentary items stay private until you explicitly approve and export them.</div>
+</section>
+
+<section id="new" class="hidden">
+<h2>New journal entry</h2><p class="muted">Choose a template. Skip anything that feels like work.</p>
+<div class="card">
+<label for="template">Entry type</label><select id="template" onchange="applyTemplate()"><option value="daily">Daily reflection · 5 minutes</option><option value="training">Training session</option><option value="recovery">Recovery / rest day</option><option value="milestone">Milestone / breakthrough</option><option value="race">Race or event day</option><option value="free">Free-form story</option></select>
+<div class="formgrid">
+<div><label for="date">Date</label><input id="date" type="date"></div>
+<div><label for="title">Title</label><input id="title" placeholder="A short title for today"></div>
+<div><label for="type">Category</label><select id="type"><option>Daily reflection</option><option>Swim</option><option>Bike</option><option>Run</option><option>Strength / mobility</option><option>Recovery</option><option>Family / life</option><option>Faith / reflection</option><option>Race / milestone</option></select></div>
+<div><label for="duration">Training duration (minutes)</label><input id="duration" type="number" min="0" placeholder="Optional"></div>
+<div><label for="distance">Distance (optional)</label><input id="distance" placeholder="e.g. 2.0 km swim"></div>
+<div><label for="rpe">Effort (RPE 1–10)</label><input id="rpe" type="number" min="1" max="10" placeholder="Optional"></div>
+<div><label for="sleep">Sleep (hours)</label><input id="sleep" type="number" min="0" max="24" step=".1" placeholder="Optional"></div>
+<div><label for="energy">Energy (1–5)</label><select id="energy"><option value="">Not recorded</option><option>1 — Very low</option><option>2 — Low</option><option>3 — Normal</option><option>4 — Good</option><option>5 — Excellent</option></select></div>
+</div>
+<label for="trainingNotes">Training — what did I do?</label><textarea id="trainingNotes" placeholder="Session, conditions, key metrics or technique observation..."></textarea>
+<label for="body">Body & recovery — how did I feel?</label><textarea id="body" placeholder="Fatigue, soreness, sleep, appetite, niggles, mood..."></textarea>
+<label for="mind">Mind — what challenged me or what did I learn?</label><textarea id="mind" placeholder="Be honest. No performance required."></textarea>
+<label for="soul">Soul — faith, intention and gratitude</label><textarea id="soul" placeholder="A moment of gratitude, patience, prayer or reflection..."></textarea>
+<label for="family">Family & life</label><textarea id="family" placeholder="A moment worth remembering, or how training fitted around life..."></textarea>
+<label for="tomorrow">Tomorrow's priority</label><textarea id="tomorrow" placeholder="One realistic next step..."></textarea>
+<label for="story">Documentary note (optional)</label><textarea id="story" placeholder="A scene, quote, moment or lesson that may belong in the future story..."></textarea>
+<div class="formgrid">
+<div><label for="weight">Weight (kg, optional)</label><input id="weight" type="number" step=".1"></div>
+<div><label for="bodyfat">Body fat % (optional)</label><input id="bodyfat" type="number" step=".1"></div>
+</div>
+<div class="checkrow"><input id="keepPrivate" type="checkbox" checked><span><b>Keep private</b><br><span class="small">Always recommended. This entry will not be included in a public export unless you later approve it.</span></span></div>
+<div class="actions"><button onclick="saveEntry()">Save entry</button><button class="secondary" onclick="clearForm()">Clear form</button></div>
+</div>
+</section>
+
+<section id="journal" class="hidden">
+<h2>Your journal</h2><p class="muted">Search and revisit the complete, private record.</p>
+<div class="card"><label for="search">Search entries</label><input id="search" placeholder="Search titles, reflections, categories..." oninput="renderEntries()"><div id="entries"></div></div>
+</section>
+
+<section id="reviews" class="hidden">
+<h2>Review templates</h2><p class="muted">Use these at a sustainable pace. Reviews should inform training, not become homework.</p>
+<div class="card">
+<h3>Weekly review · 15 minutes</h3>
+<label>Week ending</label><input id="weekDate" type="date">
+<label>What went well?</label><textarea id="wGood" placeholder="Consistency, technique, endurance, life..."></textarea>
+<label>What was difficult?</label><textarea id="wHard" placeholder="Fatigue, missed sessions, stress, niggles..."></textarea>
+<label>Training summary</label><textarea id="wTraining" placeholder="Swim / bike / run / strength volume and key sessions..."></textarea>
+<label>Recovery check</label><textarea id="wRecovery" placeholder="Sleep, energy, soreness, mood, rest days..."></textarea>
+<label>Mind, soul and family</label><textarea id="wLife" placeholder="Faith, gratitude, relationships and balance..."></textarea>
+<label>One adjustment for next week</label><textarea id="wNext" placeholder="One realistic change..."></textarea>
+<button onclick="saveReview('Weekly')">Save weekly review</button>
+</div>
+<div class="card">
+<h3>Monthly chapter · 30 minutes</h3>
+<label>Month</label><input id="monthDate" type="month">
+<label>Chapter title</label><input id="mTitle" placeholder="e.g. Learning to be patient">
+<label>Biggest achievement</label><textarea id="mWin"></textarea>
+<label>Biggest struggle / setback</label><textarea id="mSetback"></textarea>
+<label>Physical transformation</label><textarea id="mBody" placeholder="Weight, body composition, fitness, strength, endurance..."></textarea>
+<label>Mental transformation</label><textarea id="mMind" placeholder="Discipline, confidence, patience, resilience..."></textarea>
+<label>Faith, family and work-life balance</label><textarea id="mSoul"></textarea>
+<label>Lesson I want to remember</label><textarea id="mLesson"></textarea>
+<label>Next month's focus</label><textarea id="mFocus"></textarea>
+<label>Video diary notes (optional)</label><textarea id="mVideo" placeholder="What will I say on camera? Aim for 2–5 minutes, one take."></textarea>
+<button onclick="saveReview('Monthly')">Save monthly chapter</button>
+</div>
+<div class="card"><h3>Saved reviews</h3><div id="reviewList" class="muted">No reviews saved yet.</div></div>
+</section>
+
+<section id="documentary" class="hidden">
+<h2>Documentary studio</h2><p class="muted">Collect now. Curate later. Nothing here is public.</p>
+<div class="card">
+<h3>Capture a moment</h3>
+<label for="mediaDate">Date</label><input id="mediaDate" type="date">
+<label for="mediaTitle">Moment / working title</label><input id="mediaTitle" placeholder="e.g. First 4-hour ride">
+<label for="mediaKind">Format</label><select id="mediaKind"><option>Photo</option><option>Video</option><option>Voice memo</option><option>Story / quote</option><option>Race artefact</option></select>
+<label for="mediaNote">What happened and why does it matter?</label><textarea id="mediaNote" placeholder="Describe the moment. Add actual media to your Photos/Files library separately and keep its filename here."></textarea>
+<label for="mediaFile">Media filename / location (optional)</label><input id="mediaFile" placeholder="e.g. 2027-03-14_long-ride.jpg">
+<label for="mediaChapter">Potential chapter</label><select id="mediaChapter"><option>The Why</option><option>The Foundation</option><option>The Grind</option><option>The Transformation</option><option>The Final Countdown</option><option>Race Day</option><option>Beyond Ironman</option></select>
+<div class="checkrow"><input type="checkbox" id="mediaApproved"><span><b>Approved for future public consideration</b><br><span class="small">This is only a curation flag, not permission to publish. Review privacy and consent again before release.</span></span></div>
+<button onclick="saveMedia()">Save documentary item</button>
+</div>
+<div class="card"><h3>Documentary library</h3><div id="mediaList" class="muted">No moments captured yet.</div></div>
+<div class="card"><h3>Seven-chapter story arc</h3>
+<ol><li>The Why — intention and starting point</li><li>The Foundation — building the base</li><li>The Grind — ordinary days and hard work</li><li>The Transformation — physical and mental change</li><li>The Final Countdown — preparation and uncertainty</li><li>13 November 2027 — race day</li><li>Beyond Ironman — what the journey means</li></ol>
+</div>
+</section>
+
+<section id="settings" class="hidden">
+<h2>Backup & settings</h2><p class="muted">Your journal is stored in this browser on this device. Export regularly to keep an independent copy.</p>
+<div class="notice"><b>Important:</b> This first version does not sync across devices or upload data to a server. Browser data can be lost if site data is cleared or the browser is reset. Export a backup after each week of journaling and before changing devices.</div>
+<div class="card"><h3>Data backup</h3><p class="muted">Export all journal entries, reviews and documentary records as a JSON backup.</p><div class="actions"><button onclick="exportBackup()">Export full backup</button><button class="secondary" onclick="exportPublic()">Export approved documentary draft</button></div>
+<hr><label for="importFile">Restore from a previous JSON backup</label><input id="importFile" type="file" accept=".json,application/json"><div class="actions"><button class="secondary" onclick="importBackup()">Import backup</button></div></div>
+<div class="card"><h3>Privacy & recovery guardrails</h3>
+<div class="checkrow"><input type="checkbox" checked disabled><span>Private by default; no automatic sharing.</span></div>
+<div class="checkrow"><input type="checkbox" checked disabled><span>No likes, followers, comments or engagement counters.</span></div>
+<div class="checkrow"><input type="checkbox" checked disabled><span>No requirement to create content every day.</span></div>
+<div class="checkrow"><input type="checkbox" checked disabled><span>Use a 30-day cooling-off period before publishing captured material.</span></div>
+<div class="checkrow"><input type="checkbox" checked disabled><span>Do not post real-time location, home routes, children's identifying details or private family moments without consent.</span></div>
+</div>
+<div class="card"><h3>Data management</h3><p class="small">Deleting all local journal data cannot be undone. Export a backup first if you want to keep your records.</p><button class="danger" onclick="clearAll()">Delete all local journal data</button></div>
+</section>
+</main>
+<footer>THE ROAD TO LANGKAWI · PRIVATE BY DESIGN · LILLAH HI TAALA</footer>
+<script>
+const KEY='roadToLangkawiJournalV1';
+let db=load();
+function load(){try{return JSON.parse(localStorage.getItem(KEY))||{entries:[],reviews:[],media:[]}}catch(e){return{entries:[],reviews:[],media:[]}}}
+function persist(){localStorage.setItem(KEY,JSON.stringify(db));refresh()}
+function id(){return Date.now().toString(36)+Math.random().toString(36).slice(2,7)}
+function today(){return new Date().toISOString().slice(0,10)}
+document.getElementById('date').value=today();document.getElementById('mediaDate').value=today();
+function showTab(tab){document.querySelectorAll('main section').forEach(s=>s.classList.add('hidden'));document.getElementById(tab).classList.remove('hidden');document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab));if(tab==='journal')renderEntries();if(tab==='reviews')renderReviews();if(tab==='documentary')renderMedia();window.scrollTo(0,0)}
+document.querySelectorAll('nav button').forEach(b=>b.addEventListener('click',()=>showTab(b.dataset.tab)));
+const templates={
+daily:{type:'Daily reflection',trainingNotes:'',body:'',mind:'',soul:'',family:'',tomorrow:'',story:''},
+training:{type:'Swim',trainingNotes:'Session:\nDuration:\nDistance:\nKey observation:',body:'Energy before / after:\nAny discomfort?',mind:'What did this session teach me?',soul:'',family:'',tomorrow:'',story:''},
+recovery:{type:'Recovery',trainingNotes:'Rest / mobility / easy movement:',body:'Sleep:\nFatigue:\nSoreness:\nMood:',mind:'What is recovery allowing me to do?',soul:'Gratitude for rest:',family:'',tomorrow:'',story:''},
+milestone:{type:'Race / milestone',trainingNotes:'What happened?',body:'How did my body respond?',mind:'What made this meaningful?',soul:'What am I grateful for?',family:'Who shared this moment?',tomorrow:'What comes next?',story:'Describe the scene as if telling it years from now.'},
+race:{type:'Race / milestone',trainingNotes:'Event:\nResult:\nConditions:\nKey moments:',body:'Physical experience:',mind:'Mental turning points:',soul:'Intention and gratitude:',family:'People who supported me:',tomorrow:'What do I need now?',story:'Capture the day in scenes, not just statistics.'},
+free:{type:'Daily reflection',trainingNotes:'',body:'',mind:'',soul:'',family:'',tomorrow:'',story:''}
+};
+function applyTemplate(){let t=templates[document.getElementById('template').value];document.getElementById('type').value=t.type;['trainingNotes','body','mind','soul','family','tomorrow','story'].forEach(k=>document.getElementById(k).value=t[k])}
+function val(id){return document.getElementById(id).value.trim()}
+function saveEntry(){let e={id:id(),date:val('date')||today(),title:val('title')||'Untitled entry',type:val('type'),duration:Number(val('duration'))||0,distance:val('distance'),rpe:val('rpe'),sleep:val('sleep'),energy:val('energy'),trainingNotes:val('trainingNotes'),body:val('body'),mind:val('mind'),soul:val('soul'),family:val('family'),tomorrow:val('tomorrow'),story:val('story'),weight:val('weight'),bodyfat:val('bodyfat'),private:true,created:new Date().toISOString()};db.entries.unshift(e);persist();clearForm();showTab('journal')}
+function clearForm(){['title','duration','distance','rpe','sleep','energy','trainingNotes','body','mind','soul','family','tomorrow','story','weight','bodyfat'].forEach(k=>document.getElementById(k).value='');document.getElementById('date').value=today();document.getElementById('template').value='daily';document.getElementById('type').value='Daily reflection';}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function renderEntries(){let q=val('search').toLowerCase();let list=db.entries.filter(e=>(e.title+' '+e.type+' '+e.trainingNotes+' '+e.body+' '+e.mind+' '+e.soul+' '+e.family+' '+e.story).toLowerCase().includes(q));document.getElementById('entries').innerHTML=list.length?list.map(e=>`<div class="entry"><div class="small">${esc(e.date)} · ${esc(e.type)} ${e.duration?'· '+e.duration+' min':''}</div><h3>${esc(e.title)}</h3><p>${esc(e.trainingNotes||e.mind||e.body||'No written reflection')}</p><div class="actions"><button class="ghost" onclick="viewEntry('${e.id}')">Read</button><button class="ghost" onclick="deleteItem('entries','${e.id}')">Delete</button></div></div>`).join(''):'<p class="muted">No matching entries.</p>'}
+function viewEntry(key){let e=db.entries.find(x=>x.id===key);if(!e)return;let fields=['trainingNotes','body','mind','soul','family','tomorrow','story'];let labels=['Training','Body & recovery','Mind','Soul','Family & life','Tomorrow','Documentary note'];let w=window.open('','_blank');if(!w){alert('Allow pop-ups to read this entry, or use the journal search.');return}w.document.write('<meta name="viewport" content="width=device-width"><title>'+esc(e.title)+'</title><body style="font:16px/1.6 system-ui;max-width:700px;margin:35px auto;padding:0 18px;color:#24352c"><h1>'+esc(e.title)+'</h1><p>'+esc(e.date)+' · '+esc(e.type)+'</p>'+fields.map((f,i)=>e[f]?'<h3>'+labels[i]+'</h3><p style="white-space:pre-wrap">'+esc(e[f])+'</p>':'').join('')+'</body>')}
+function saveReview(kind){let fields=kind==='Weekly'?['weekDate','wGood','wHard','wTraining','wRecovery','wLife','wNext']:['monthDate','mTitle','mWin','mSetback','mBody','mMind','mSoul','mLesson','mFocus','mVideo'];let r={id:id(),kind,date:val(fields[0])||today(),data:{}};fields.slice(1).forEach(f=>r.data[f]=val(f));db.reviews.unshift(r);persist();fields.forEach(f=>document.getElementById(f).value='');renderReviews();alert(kind+' review saved.')}
+function renderReviews(){document.getElementById('reviewList').innerHTML=db.reviews.length?db.reviews.map(r=>`<div class="entry"><b>${esc(r.kind)} review · ${esc(r.date)}</b><p>${esc(Object.values(r.data).find(Boolean)||'Saved review')}</p><button class="ghost" onclick="deleteItem('reviews','${r.id}')">Delete</button></div>`).join(''):'No reviews saved yet.'}
+function saveMedia(){let m={id:id(),date:val('mediaDate')||today(),title:val('mediaTitle')||'Untitled moment',kind:val('mediaKind'),note:val('mediaNote'),file:val('mediaFile'),chapter:val('mediaChapter'),approved:document.getElementById('mediaApproved').checked,created:new Date().toISOString()};db.media.unshift(m);persist();['mediaTitle','mediaNote','mediaFile'].forEach(x=>document.getElementById(x).value='');document.getElementById('mediaApproved').checked=false;renderMedia()}
+function renderMedia(){document.getElementById('mediaList').innerHTML=db.media.length?db.media.map(m=>`<div class="entry"><div class="small">${esc(m.date)} · ${esc(m.kind)} · ${esc(m.chapter)}</div><h3>${esc(m.title)}</h3><p>${esc(m.note)}</p><p class="small">${esc(m.file)} ${m.approved?'· Approved for consideration':'· Private / not approved'}</p><button class="ghost" onclick="deleteItem('media','${m.id}')">Delete</button></div>`).join(''):'No moments captured yet.'}
+function deleteItem(collection,key){if(!confirm('Delete this item? This cannot be undone.'))return;db[collection]=db[collection].filter(x=>x.id!==key);persist();renderEntries();renderReviews();renderMedia()}
+function refresh(){document.getElementById('entryCount').textContent=db.entries.length;document.getElementById('hours').textContent=(db.entries.reduce((a,e)=>a+(Number(e.duration)||0),0)/60).toFixed(1);document.getElementById('mediaCount').textContent=db.media.length;document.getElementById('latest').innerHTML=db.entries.slice(0,3).map(e=>`<div class="entry"><div class="small">${esc(e.date)} · ${esc(e.type)}</div><b>${esc(e.title)}</b><p>${esc(e.trainingNotes||e.mind||e.body||'')}</p></div>`).join('')||'No entries yet. Your first page is waiting.'}
+function exportFile(name,obj){let blob=new Blob([JSON.stringify(obj,null,2)],{type:'application/json'});let a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;a.click();URL.revokeObjectURL(a.href)}
+function exportBackup(){exportFile('road-to-langkawi-backup-'+today()+'.json',{version:1,exported:new Date().toISOString(),...db})}
+function exportPublic(){let approved=db.media.filter(m=>m.approved);let chapters=['The Why','The Foundation','The Grind','The Transformation','The Final Countdown','Race Day','Beyond Ironman'];let payload={title:'The Road to Langkawi — Ironman 2027',note:'Draft only. Review consent, privacy, accuracy and the 30-day cooling-off period before publishing.',chapters:chapters.map(c=>({chapter:c,items:approved.filter(m=>m.chapter===c)})),approvedMedia:approved};exportFile('road-to-langkawi-public-draft-'+today()+'.json',payload)}
+function importBackup(){let f=document.getElementById('importFile').files[0];if(!f){alert('Choose a JSON backup first.');return}let reader=new FileReader();reader.onload=()=>{try{let d=JSON.parse(reader.result);if(!Array.isArray(d.entries)||!Array.isArray(d.reviews)||!Array.isArray(d.media))throw Error();if(!confirm('Import and merge this backup with the current journal?'))return;db.entries=[...d.entries,...db.entries];db.reviews=[...d.reviews,...db.reviews];db.media=[...d.media,...db.media];persist();alert('Backup imported. Existing entries were retained.')}catch(e){alert('That file does not look like a valid journal backup.')}};reader.readAsText(f)}
+function clearAll(){if(!confirm('Permanently delete ALL local entries, reviews and documentary items? Export a backup first.'))return;if(!confirm('Final confirmation: delete all journal data on this browser?'))return;db={entries:[],reviews:[],media:[]};persist();alert('Local journal data cleared.')}
+let race=new Date('2027-11-13T00:00:00');let days=Math.ceil((race-new Date(new Date().toDateString()))/86400000);document.getElementById('countdown').textContent=days>=0?days:'Race date passed';
+refresh();
+</script>
+</body></html>
